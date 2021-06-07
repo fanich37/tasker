@@ -1,0 +1,55 @@
+# Login
+
+![Login diagram](./images/login-diagram.svg)
+
+## Login form
+
+Simple data validation:
+
+- check login and password are filled;
+- check email with simple regexp.
+
+Have a link to restore password form.
+
+## Request
+
+Request body (POST):
+
+```
+{
+    data: {
+        login: string,
+        password: string,
+    }
+}
+```
+
+## Response
+
+- If user is found and credentials are valid:
+
+```
+{
+    data: {
+        token: string,
+        expiration: number,
+    }
+}
+```
+
+Token may contain user personal data, it's permissions if any etc.
+Do some work on response: keep token and expiration, maybe redirect to some app page (tasks probably).
+
+- If user is found but password is not valid or if user is not found:
+
+```
+{
+    error: {
+        code: number, // code can be specified according to project needs
+        message: string,
+        data?: { [key: string]: string },
+    }
+}
+```
+
+Inform user about the error occured (toast or smth). Highlight form fields.
