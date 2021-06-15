@@ -6,8 +6,8 @@
 
 Simple data validation:
 
-- check login and password are filled;
-- check email with simple regexp.
+- check login is entered;
+- check password is entered.
 
 Have a link to restore password form.
 
