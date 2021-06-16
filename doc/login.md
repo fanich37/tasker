@@ -39,6 +39,6 @@ Request body (POST):
 Token may contain user personal data, it's permissions if any etc.
 Do some work on response: keep token and expiration, maybe redirect to some app page (tasks probably).
 
-- If user is found but password is not valid or if user is not found - respond with ther ResponseBodyError interface.
+- If user is found but password is not valid or if user is not found - respond with the ResponseBodyError interface.
 
 Inform user about the error occured (toast or smth). Highlight form fields.
