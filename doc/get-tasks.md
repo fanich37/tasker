@@ -1,8 +1,8 @@
-# Filter tasks
+# Get tasks
 
-![Filter tasks diagram](./images/filter-tasks-diagram.svg)
+![Get tasks diagram](./images/get-tasks-diagram.svg)
 
-## Filter tasks form
+## Get tasks form
 
 All fields are optional. Any field change should be throttled or debounced.
 
@@ -20,4 +20,8 @@ Depends on back-end it might be GET or POST. I lean towards using GET.
 }
 ```
 
-- If search is failed - respond with the ResponseBodyError interface.
+- If search request is failed - respond with the ResponseBodyError interface.
+
+## Note
+
+This service might be used for getting single task
